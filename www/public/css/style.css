@@ -1,0 +1,221 @@
+/* public/css/style.css (Versió Final amb imatges a la llista) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --font-heading: 'Lora', serif;
+    --font-body: 'Lato', sans-serif;
+    --primary-color: #b74343;
+    --timeline-color: #000000;
+    --secondary-color: #5a6f56;
+    --accent-color: #d1d1d1;
+    --bg-light: #fdfaf4;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding-top: 0;
+}
+
+/* --- Capçalera --- */
+.hero-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 20;
+}
+.hero-brand-container, .hero-nav {
+    background: rgba(0,0,0,0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.25rem;
+    color: white;
+}
+.hero-brand-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.hero-brand-logo {
+    height: 90px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
+}
+.hero-brand-text h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+.hero-brand-text p {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.9;
+}
+.hero-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+.hero-nav .nav-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* --- Secció HERO --- */
+.hero-section {
+    position: relative;
+    height: 35vh;
+    min-height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: #333;
+}
+.hero-images { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; }
+.hero-img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: center; opacity: 0; animation: hero-fade 72s linear infinite, ken-burns-potent 36s ease-in-out infinite; }
+@keyframes ken-burns-potent { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+@keyframes hero-fade { 0% { opacity: 0; } 2% { opacity: 1; } 14% { opacity: 1; } 16.66% { opacity: 0; } 100% { opacity: 0; } }
+
+/* --- Barra Lateral de Filtres --- */
+.sidebar-filters { position: sticky; top: 20px; background-color: #fff; border: 1px solid #e8e2d9; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-height: calc(100vh - 40px); overflow-y: auto; }
+.sidebar-filters .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+.sidebar-filters .btn-primary:hover { background-color: #9c3a3a; border-color: #9c3a3a; }
+.sidebar-filters h4.mb-3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem !important;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem !important;
+}
+#public-filters-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+#public-filters-form > .mb-3 {
+    flex: 1 1 180px;
+    margin-bottom: 0 !important;
+}
+#public-filters-form .d-grid {
+    flex-basis: auto;
+    flex-grow: 0;
+}
+.sidebar-controls { border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem; }
+.sidebar-controls .control-label { font-weight: bold; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 0.75rem; display: block; text-align: center; }
+.sidebar-controls .btn-group { width: 100%; }
+.sidebar-controls .btn-group .btn { width: 50%; padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: 0.9rem; }
+
+/* --- Panell d'Estadístiques --- */
+.stats-panel { display: flex; justify-content: space-around; background-color: #fff; border: 1px solid #e8e2d9; border-radius: 8px; padding: 1rem; margin-bottom: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+.stat-item { border-right: 1px solid #e8e2d9; padding: 0 1rem; flex-grow: 1; flex-basis: 0; }
+.stat-item:last-child { border-right: none; }
+.stat-value { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: var(--primary-color); line-height: 1.1; }
+.stat-value.small { font-size: 1.1rem; font-family: var(--font-body); font-weight: 700; margin-top: 5px; }
+.stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+/* --- Línia de Temps --- */
+.timeline-container { position: relative; padding-top: 0; }
+.timeline-container::before, #timeline-progress { content: ''; position: absolute; top: 0; left: 20px; width: 2px; z-index: 1; }
+.timeline-container::before { height: 100%; background-color: #e0e0e0; }
+#timeline-progress { background-color: var(--timeline-color); height: 0; transition: height 0.1s linear; z-index: 2;}
+.timeline-item { position: relative; z-index: 5; margin-bottom: 20px; padding-left: 60px; opacity: 0; transform: translateY(50px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.timeline-item.in-view { opacity: 1; transform: translateY(0); }
+.timeline-icon { position: absolute; left: 21px; top: 5px; transform: translateX(-50%); width: 40px; height: 40px; border-radius: 50%; background-color: white; color: white; display: flex; align-items: center; justify-content: center; border: 3px solid #f1f1f1; box-shadow: 0 3px 8px rgba(0,0,0,0.1); z-index: 10; font-size: 1.2rem; transition: transform 0.3s ease; }
+.timeline-item.in-view .timeline-icon { transform: translateX(-50%) scale(1.05); }
+.timeline-week-header { margin-bottom: 25px; padding-top: 5px; }
+.timeline-week-header h2 { color: var(--text-dark); font-size: 1.5rem; font-weight: bold; font-family: var(--font-heading); }
+.timeline-week-header .timeline-icon { background-color: var(--text-dark); }
+.timeline-week-header .timeline-icon-start { background-color: var(--primary-color); }
+.special-start-icon { color: white; }
+.red-week-icon { color: white; font-size: 1.4rem; }
+
+.btn-outline-primary { color: var(--primary-color); border-color: var(--primary-color); }
+.btn-outline-primary:hover { background-color: var(--primary-color); color: white; }
+.btn-group.bg-white .btn.active, .sidebar-controls .btn-group .btn.active { background-color: var(--primary-color); color: white; }
+
+/* --- LLISTA SETMANAL COMPACTA D'ESDEVENIMENTS --- */
+.weekly-events-list { background: #fff; border-radius: 8px; border: 1px solid #eee; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.weekly-event-item-link { text-decoration: none; color: var(--text-dark); }
+.weekly-event-item { display: flex; align-items: center; padding: 0.75rem; border-radius: 6px; transition: background-color 0.2s ease; }
+.weekly-event-item-link:hover .weekly-event-item { background-color: #f7f5f1; }
+.weekly-event-item-link:not(:last-child) .weekly-event-item { border-bottom: 1px solid #f0f0f0; }
+
+/* ===== REGLA RESTAURADA PER A LA IMATGE DE L'ESDEVENIMENT ===== */
+.event-image {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-date { flex-shrink: 0; text-align: center; margin-right: 1rem; width: 45px; }
+.event-date .day-number { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); display: block; line-height: 1.1; }
+.event-date .day-name { font-size: 0.75rem; font-weight: bold; color: var(--text-muted); text-transform: uppercase; }
+.event-details { flex-grow: 1; }
+.event-details .event-title { font-weight: bold; display: block; margin-bottom: 0.1rem; }
+.event-details .event-location { font-size: 0.85rem; color: var(--text-muted); }
+.event-details .event-location i { color: var(--primary-color); margin-right: 3px; }
+.event-arrow { font-size: 0.9rem; color: #ccc; transition: transform 0.2s ease; }
+.weekly-event-item-link:hover .event-arrow { transform: translateX(4px); color: var(--primary-color); }
+
+.card-body .list-unstyled .fa-fw { color: var(--primary-color) !important; }
+.badge.text-bg-primary { background-color: var(--text-dark) !important; }
+
+
+/* ===== NOUS COLORS PER ALS DIES DELS MERCATS SETMANALS ===== */
+.badge-dia {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+}
+
+.badge-dia-Dilluns { background-color: #0d6efd; } /* Blau */
+.badge-dia-Dimarts { background-color: #198754; } /* Verd */
+.badge-dia-Dimecres { background-color: #fd7e14; } /* Taronja */
+.badge-dia-Dijous { background-color: #8f48cf; } /* Lila */
+.badge-dia-Divendres { background-color: #20c997; } /* Turquesa */
+.badge-dia-Dissabte { background-color: #495057; } /* Gris Fosc */
+.badge-dia-Diumenge { background-color: #dc3545; } /* Vermell */
+
+
+.event-detail-img {
+    width: 100%; /* Ocupa tot l'ample de la seva columna */
+    max-height: 450px; /* Alçada màxima (pots ajustar aquest valor al teu gust) */
+    object-fit: cover; /* Assegura que la imatge ompli l'espai sense deformar-se */
+    object-position: center; /* Centra la imatge dins del seu marc */
+}
+
+/* ===== CORRECCIÓ DE CAPES (Z-INDEX) ===== */
+main {
+    position: relative;
+    z-index: 10;
+    background-color: var(--bg-light); 
+}

@@ -1,0 +1,166 @@
+Listado de rutas de carpetas para el volumen OS
+El número de serie del volumen es 2C15-54CD
+C:.
++---config
+¦       db.php
+¦       
++---moduls
+¦   +---Backend
+¦   ¦   +---Admin
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       controlar_robot.php
+¦   ¦   ¦   ¦       executar_robot_ajax.php
+¦   ¦   ¦   ¦       filtrar_esdeveniments_ajax.php
+¦   ¦   ¦   ¦       panell_admin.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦       ¦   controlar_robot.php
+¦   ¦   ¦       ¦   panell_admin.php
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---components
+¦   ¦   ¦               filtres_taula_esdeveniments.php
+¦   ¦   ¦               paginacio_esdeveniments.php
+¦   ¦   ¦               taula_esdeveniments.php
+¦   ¦   ¦               
+¦   ¦   +---Nucli
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       escriptori_principal.php
+¦   ¦   ¦   ¦       login.php
+¦   ¦   ¦   ¦       logout.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦           escriptori_principal.php
+¦   ¦   ¦           
+¦   ¦   +---Organitzador
+¦   ¦       +---controladors
+¦   ¦       ¦       panell_organitzadors.php
+¦   ¦       ¦       
+¦   ¦       +---vistes
+¦   ¦           ¦   panell_organitzadors.php
+¦   ¦           ¦   
+¦   ¦           +---components
+¦   ¦                   filtres_taula_esdeveniments.php
+¦   ¦                   taula_esdeveniments.php
+¦   ¦                   
+¦   +---Entitats
+¦   ¦   +---Categoria
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       desar_categoria.php
+¦   ¦   ¦   ¦       llistar_categories.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦           formulari_categoria.php
+¦   ¦   ¦           llistar_categories.php
+¦   ¦   ¦           
+¦   ¦   +---Esdeveniment
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       guardar_esdeveniment.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦           crear_esdeveniment.php
+¦   ¦   ¦           
+¦   ¦   +---Mercat
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       desar_mercat.php
+¦   ¦   ¦   ¦       gestionar_mercats.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦           formulari_mercat.php
+¦   ¦   ¦           gestionar_mercats.php
+¦   ¦   ¦           
+¦   ¦   +---Municipi
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       desar_municipis.php
+¦   ¦   ¦   ¦       llistar_municipis.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦           formulari_municipi.php
+¦   ¦   ¦           llistar_municipis.php
+¦   ¦   ¦           
+¦   ¦   +---Organitzador
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       desar_organitzadors.php
+¦   ¦   ¦   ¦       filtrar_organitzadors_ajax.php
+¦   ¦   ¦   ¦       llistar_organitzadors.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦       ¦   formulari_organitzador.php
+¦   ¦   ¦       ¦   llistar_organitzadors.php
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---components
+¦   ¦   ¦               paginacio_organitzadors.php
+¦   ¦   ¦               taula_organitzadors.php
+¦   ¦   ¦               
+¦   ¦   +---Subcategories
+¦   ¦   ¦   +---controladors
+¦   ¦   ¦   ¦       desar_subcategories.php
+¦   ¦   ¦   ¦       llistar_subcategories.php
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vistes
+¦   ¦   ¦           formulari_subcategories.php
+¦   ¦   ¦           llistar_subcategories.php
+¦   ¦   ¦           
+¦   ¦   +---Validacio
+¦   ¦       +---controladors
+¦   ¦       ¦       aprovar_esdeveniment.php
+¦   ¦       ¦       
+¦   ¦       +---vistes
+¦   ¦               formulari_validacio.php
+¦   ¦               
+¦   +---Portal
+¦       +---controladors
+¦       ¦       calendari_json.php
+¦       ¦       events_json.php
+¦       ¦       llistar_esdeveniments.php
+¦       ¦       llistar_mercats_public.php
+¦       ¦       subscriure.php
+¦       ¦       veure_esdeveniment.php
+¦       ¦       
+¦       +---vistes
+¦               formulari_subscripcio.php
+¦               llistar_esdeveniments.php
+¦               llistar_mercats_public.php
+¦               veure_esdeveniment.php
+¦               
++---plantilles
+¦   ¦   layout.php
+¦   ¦   layout_public.php
+¦   ¦   login.php
+¦   ¦   
+¦   +---components
+¦           toast.php
+¦           
++---public
+¦   ¦   index.php
+¦   ¦   
+¦   +---css
+¦   ¦       style.css
+¦   ¦       
+¦   +---img
+¦   ¦       1.jpg
+¦   ¦       2.jpg
+¦   ¦       3.jpg
+¦   ¦       4.jpg
+¦   ¦       5.jpg
+¦   ¦       6.jpg
+¦   ¦       AgendaOsona.gif
+¦   ¦       consell apaisat.png
+¦   ¦       Consell.jpg
+¦   ¦       IniciAgenda.jpg
+¦   ¦       logoturisme.jpg
+¦   ¦       organitzador_generic.png
+¦   ¦       
+¦   +---js
+¦   ¦       admin.js
+¦   ¦       app.js
+¦   ¦       organitzadors.js
+¦   ¦       
+¦   +---uploads
++---robot
+¦       balenya.php
+¦       roda_de_ter.php
+¦       scraper_helpers.php
+¦       
++---src
+        ajudants.php
+        
